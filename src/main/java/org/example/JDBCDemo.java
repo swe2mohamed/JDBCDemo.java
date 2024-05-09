@@ -5,14 +5,16 @@ import java.time.LocalDate;
 
 public class JDBCDemo {
     public static void main(String[] args) {
+        ex1();
+    }
+    public static void ex1(){
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/school_db", "root","1234");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/school_db", "root","password");
             Statement statement = connection.createStatement();
             // executeQuery method is used for executing SELECT queries; (READ)
             ResultSet resultSet =  statement.executeQuery("select * from student");
             // executeUpdate method is used for INSERT , DELETE or UPDATE queries;
             // statement.executeUpdate();
-
             while (resultSet.next()){
                 int studentId =  resultSet.getInt("student_id");
                 String firstName = resultSet.getString("first_name");

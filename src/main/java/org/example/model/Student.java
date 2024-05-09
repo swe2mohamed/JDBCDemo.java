@@ -4,24 +4,24 @@ import java.time.LocalDate;
 
 public class Student {
     private int studentId;
-    private String firstNae;
+    private String firstName;
     private String lastName;
     private int age;
     private String email;
     private LocalDate createDate;
 
     // Is used to create student in the student table
-    public Student(String firstNae, String lastName, int age, String email) {
-        this.firstNae = firstNae;
+    public Student(String firstName, String lastName, int age, String email) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.email = email;
     }
 
     // Is used when we want to fetch data from the student table
-    public Student(int studentId, String firstNae, String lastName, int age, String email, LocalDate createDate) {
+    public Student(int studentId, String firstName, String lastName, int age, String email, LocalDate createDate) {
         this.studentId = studentId;
-        this.firstNae = firstNae;
+        this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.email = email;
@@ -32,8 +32,8 @@ public class Student {
         return studentId;
     }
 
-    public String getFirstNae() {
-        return firstNae;
+    public String getfirstName() {
+        return firstName;
     }
 
     public String getLastName() {
@@ -56,7 +56,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "studentId=" + studentId +
-                ", firstNae='" + firstNae + '\'' +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 ", email='" + email + '\'' +
