@@ -9,7 +9,7 @@ public class JDBCDemo {
     }
     public static void ex1(){
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/school_db", "root","password");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/school_db", "root","password");
             Statement statement = connection.createStatement();
             // executeQuery method is used for executing SELECT queries; (READ)
             ResultSet resultSet =  statement.executeQuery("select * from student");
